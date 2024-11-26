@@ -10,6 +10,9 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    
+    - name: Cloudflare Gateway Zero Trust 
+      run: python -m src leave
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
